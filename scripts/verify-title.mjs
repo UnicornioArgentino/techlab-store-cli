@@ -5,10 +5,14 @@ function run(cmd, args) {
   return p.status === 0;
 }
 
-const path  = process.argv[2] || "./export/products.json";
-const title = process.argv[3] || "";
+const path = process.argv[2] || "./export/products.json";
+let title = process.argv.slice(3).join(" ").trim();
 if (!title) {
-  console.error("Uso: node scripts/verify-title.mjs <path-json> \"<titulo>\"");
+  title = (process.env.TITLE || process.env.npm_config_title || "").trim();
+}
+
+if (!title) {
+  console.error('Uso: npm run verify:title -- "Título"   ó   npm run export:check --title="Título"');
   process.exit(2);
 }
 

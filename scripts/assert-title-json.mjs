@@ -1,16 +1,16 @@
 ﻿import fs from "node:fs";
 
 const PATH  = process.argv[2] || "./export/products.json";
-const TITLE = process.argv[3] || "Remera DS Análisis";
+const TITLE = process.argv[3] || "";
 
 const clean = (s) => (s ?? "")
   .normalize("NFC")
-  .replace(/[\u200B-\u200D\uFEFF]/g, "") // zero width + BOM
+  .replace(/[\u200B-\u200D\uFEFF]/g, "")
   .trim();
 
 const strip = (s) => clean(s)
   .normalize("NFD")
-  .replace(/\p{Mn}+/gu, "")               // quita tildes
+  .replace(/\p{Mn}+/gu, "")
   .toLowerCase();
 
 const raw = fs.readFileSync(PATH, "utf8").replace(/^\uFEFF/, "");
