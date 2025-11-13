@@ -1,4 +1,6 @@
-﻿# techlab-store-cli
+﻿[![CI](https://github.com/UnicornioArgentino/techlab-store-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/UnicornioArgentino/techlab-store-cli/actions/workflows/ci.yml)
+
+# techlab-store-cli
 
 CLI mínima para generar un catálogo **export/products.json** desde una fuente API + locales,
 y verificar que exista un producto clave.
@@ -20,3 +22,4 @@ Hay un hook *.git/hooks/pre-commit.bat* que bloquea el commit si falla la verifi
 
 ## Licencia
 MIT
+
