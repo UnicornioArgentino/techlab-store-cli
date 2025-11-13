@@ -21,6 +21,7 @@
     "test:title": "powershell -NoLogo -ExecutionPolicy Bypass -File ./scripts/assert-title.ps1 -Title 'Remera DS Análisis'",
     "test:title:raw": "powershell -NoLogo -ExecutionPolicy Bypass -File ./scripts/assert-title-raw.ps1 -Path ./export/products.json",
     "test:title:json": "node ./scripts/assert-title-json.mjs ./export/products.json \"Remera DS Análisis\"",
-    "verify:producto": "node ./scripts/verify-product.mjs"
+    "verify:producto": "node ./scripts/verify-product.mjs",
+    "verify:title": "node ./scripts/verify-title.mjs ./export/products.json"
   }
 }
