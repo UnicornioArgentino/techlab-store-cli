@@ -1,19 +1,22 @@
-﻿# TechLab Store CLI
+﻿# techlab-store-cli
 
-- Node ESM + PowerShell friendly.
-- GET/POST/DELETE/EXPORT contra FakeStoreAPI.
+CLI mínima para generar un catálogo **export/products.json** desde una fuente API + locales,
+y verificar que exista un producto clave.
 
-## Uso rápido
-node index.js GET products
-node index.js GET products/5
-node index.js POST products "Remera DS Análisis" 299 ropa
-node index.js DELETE products/7
+## Requisitos
+- Node.js 18+ (probado con 22.x)
+- Windows PowerShell
 
-## Scripts
-npm run get:all
-npm run get:one
-npm run get:cat:list
-npm run get:cat:elec
-npm run export:all
-npm run post:demo
-npm run del:demo
+## Comandos
+\\\ash
+npm run export                 # genera export/products.json
+node ./scripts/smoke.mjs       # smoke: valida que haya >= 21 items
+npm run verify:title -- "Remera DS Análisis"   # verifica existencia por título
+npm run export:check -- "Remera DS Análisis"   # export + verificación en un paso
+\\\
+
+## Verificación automática (pre-commit)
+Hay un hook *.git/hooks/pre-commit.bat* que bloquea el commit si falla la verificación.
+
+## Licencia
+MIT

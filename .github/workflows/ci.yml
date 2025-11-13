@@ -1,0 +1,22 @@
+﻿name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+      - run: npm ci || npm i
+      - name: Exportar catálogo
+        run: npm run export
+      - name: Smoke de items
+        run: node ./scripts/smoke.mjs
+      - name: Verificar título clave
+        run: npm run verify:title -- "Remera DS Análisis"
