@@ -1,6 +1,6 @@
 {
   "name": "techlab-store-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CLI en Node.js para gestionar productos usando FakeStoreAPI (GET/POST/DELETE)",
   "type": "module",
   "main": "index.js",
