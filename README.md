@@ -23,3 +23,7 @@ Hay un hook *.git/hooks/pre-commit.bat* que bloquea el commit si falla la verifi
 ## Licencia
 MIT
 
+## Uso rápido
+npm run export
+node ./scripts/smoke.mjs
+npm run verify:title -- \"Remera DS Análisis\"
