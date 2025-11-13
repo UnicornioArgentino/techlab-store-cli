@@ -1,28 +1,36 @@
-﻿{
-    "name":  "techlab-store-cli",
-    "version":  "1.0.0",
-    "description":  "CLI en Node.js para gestionar productos usando FakeStoreAPI (GET/POST/DELETE)",
-    "type":  "module",
-    "main":  "index.js",
-    "keywords":  [
-                     "node",
-                     "cli",
-                     "api",
-                     "fakestore",
-                     "portfolio"
-                 ],
-    "author":  "Juan Miguel Gigante",
-    "license":  "MIT",
-    "scripts":  {
-                    "smoke":  "powershell -NoLogo -ExecutionPolicy Bypass -File ./scripts/smoke.ps1",
-                    "export":  "node ./scripts/export-json.js",
-                    "bench":  "node ./scripts/bench.js",
-                    "export:csv":  "node ./scripts/export-csv.js",
-                    "test:title":  "powershell -NoLogo -ExecutionPolicy Bypass -File ./scripts/assert-title.ps1 -Title \u0027Remera DS AnÃ¡lisis\u0027",
-                    "test:title:raw":  "powershell -NoLogo -ExecutionPolicy Bypass -File ./scripts/assert-title-raw.ps1 -Path ./export/products.json",
-                    "test:title:json":  "node ./scripts/assert-title-json.mjs ./export/products.json \"Remera DS AnÃ¡lisis\"",
-                    "verify:producto":  "node ./scripts/verify-product.mjs",
-                    "verify:title":  "node ./scripts/verify-title.mjs ./export/products.json",
-                    "export:check":  "powershell -NoLogo -ExecutionPolicy Bypass -File ./scripts/export-check.ps1"
-                }
+{
+  "name": "techlab-store-cli",
+  "version": "1.0.0",
+  "description": "CLI en Node.js para gestionar productos usando FakeStoreAPI (GET/POST/DELETE)",
+  "type": "module",
+  "main": "index.js",
+  "keywords": [
+    "node",
+    "cli",
+    "api",
+    "fakestore",
+    "portfolio"
+  ],
+  "author": "Juan Miguel Gigante",
+  "license": "MIT",
+  "scripts": {
+    "smoke": "powershell -NoLogo -ExecutionPolicy Bypass -File ./scripts/smoke.ps1",
+    "export": "node ./scripts/export-json.js",
+    "bench": "node ./scripts/bench.js",
+    "export:csv": "node ./scripts/export-csv.js",
+    "test:title": "powershell -NoLogo -ExecutionPolicy Bypass -File ./scripts/assert-title.ps1 -Title 'Remera DS AnÃ¡lisis'",
+    "test:title:raw": "powershell -NoLogo -ExecutionPolicy Bypass -File ./scripts/assert-title-raw.ps1 -Path ./export/products.json",
+    "test:title:json": "node ./scripts/assert-title-json.mjs ./export/products.json \"Remera DS AnÃ¡lisis\"",
+    "verify:producto": "node ./scripts/verify-product.mjs",
+    "verify:title": "node ./scripts/verify-title.mjs ./export/products.json",
+    "export:check": "powershell -NoLogo -ExecutionPolicy Bypass -File ./scripts/export-check.ps1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/UnicornioArgentino/techlab-store-cli.git"
+  },
+  "homepage": "https://github.com/UnicornioArgentino/techlab-store-cli",
+  "bugs": {
+    "url": "https://github.com/UnicornioArgentino/techlab-store-cli/issues"
+  }
 }
