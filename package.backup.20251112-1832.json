@@ -1,0 +1,26 @@
+﻿{
+    "name":  "techlab-store-cli",
+    "version":  "1.0.0",
+    "description":  "CLI en Node.js para gestionar productos usando FakeStoreAPI (GET/POST/DELETE)",
+    "type":  "module",
+    "main":  "index.js",
+    "scripts": {
+    "get:all": "node index.js GET products",
+    "get:one": "node index.js GET products/5",
+    "get:cat:list": "node index.js GET products/category/list",
+    "get:cat:elec": "node index.js GET products/category/electronics",
+    "export:all": "node index.js EXPORT products",
+    "post:demo": "node index.js POST products \\"Remera DS Análisis\\" 299 ropa",
+    "del:demo": "node index.js DELETE products/7"
+  },
+    "keywords":  [
+                     "node",
+                     "cli",
+                     "api",
+                     "fakestore",
+                     "portfolio"
+                 ],
+    "author":  "Juan Miguel Gigante",
+    "license":  "MIT"
+}
+

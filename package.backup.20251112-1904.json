@@ -1,0 +1,22 @@
+﻿{
+    "name":  "techlab-store-cli",
+    "version":  "1.0.0",
+    "description":  "CLI en Node.js para gestionar productos usando FakeStoreAPI (GET/POST/DELETE)",
+    "type":  "module",
+    "main":  "index.js",
+    "keywords":  [
+                     "node",
+                     "cli",
+                     "api",
+                     "fakestore",
+                     "portfolio"
+                 ],
+    "author":  "Juan Miguel Gigante",
+    "license":  "MIT",
+    "scripts":  {
+                    "smoke":  "powershell -NoLogo -ExecutionPolicy Bypass -File ./scripts/smoke.ps1",
+                    "export":  "powershell -NoLogo -ExecutionPolicy Bypass -File ./scripts/export-all.ps1",
+                    "bench":  "powershell -NoLogo -ExecutionPolicy Bypass -File ./scripts/bench.ps1",
+                    "export:csv":  "powershell -NoLogo -ExecutionPolicy Bypass -File ./scripts/export-csv.ps1"
+                }
+}

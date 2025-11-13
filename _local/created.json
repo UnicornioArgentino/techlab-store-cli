@@ -1,0 +1,14 @@
+[
+  {
+    "id": null,
+    "title": "Remera DS Análisis",
+    "price": 299,
+    "description": "Producto creado desde CLI de TechLab.",
+    "image": "https://i.pravatar.cc/200",
+    "category": "ropa",
+    "rating": {
+      "rate": null,
+      "count": 0
+    }
+  }
+]
