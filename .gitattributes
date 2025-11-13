@@ -1,2 +1,13 @@
-﻿* text=auto eol=lf
+﻿# Normalizamos texto a LF en el repo; Git convierte a CRLF en tu checkout si corresponde
+* text=auto eol=lf
+
+# Mantener PS1 con CRLF (opcional, si lo preferís así en Windows)
 *.ps1 text eol=crlf
+
+# Archivos binarios sin conversión
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
